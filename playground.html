@@ -12,7 +12,6 @@
 
 <div class="container">
 
-
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -67,10 +66,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div id="hello_world">
-  
-</div>
-
 <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li><a href="#">Library</a></li>
@@ -78,24 +73,40 @@
 </ol>
 
 
-<div class="alert alert-success">
-  <a id="changeable" href="#" class="alert-link">...</a>
-</div>
-<div class="alert alert-info">
-  <a href="#" class="alert-link">...</a>
-</div>
-<div class="alert alert-warning">
-  <a href="#" class="alert-link">...</a>
-</div>
-<div class="alert alert-danger">
-  <a href="#" class="alert-link">...</a>
+
+{
+title: "something",
+description: "something else",
+content: "a lot of text here asdf asdfasdf asfd ",
+url: "http://"
+category: "school"
+}
+
+
+<div class="row">
+  <div class="col-md-4">
+    <h1>Resource Title</h1>
+    <h4>Resource Description</h4>
+    <p>Jean shorts McSweeney's Tumblr post-ironic, keffiyeh Intelligentsia stumptown +1 master cleanse meh seitan plaid salvia irony. Freegan ennui Kickstarter Austin. Roof party seitan gluten-free, letterpress dreamcatcher Tumblr sriracha Echo Park YOLO slow-carb trust fund pop-up. Ennui small batch polaroid, tote bag photo booth Pinterest banjo sartorial slow-carb keffiyeh Intelligentsia retro. Butcher salvia Neutra actually. 90's fingerstache roof party twee Neutra, Pitchfork meggings literally. Pinterest Neutra paleo, salvia street art Tonx Echo Park literally tattooed.</p>
+    <a href="#">Link to the resource</a>
+    
+  </div>
+  <div class="col-md-4">
+    <h1>Resource Title</h1>
+    <h4>Resource Description</h4>
+    <p>Jean shorts McSweeney's Tumblr post-ironic, keffiyeh Intelligentsia stumptown +1 master cleanse meh seitan plaid salvia irony. Freegan ennui Kickstarter Austin. Roof party seitan gluten-free, letterpress dreamcatcher Tumblr sriracha Echo Park YOLO slow-carb trust fund pop-up. Ennui small batch polaroid, tote bag photo booth Pinterest banjo sartorial slow-carb keffiyeh Intelligentsia retro. Butcher salvia Neutra actually. 90's fingerstache roof party twee Neutra, Pitchfork meggings literally. Pinterest Neutra paleo, salvia street art Tonx Echo Park literally tattooed.</p>
+    <a href="#">Link to the resource</a>  
+  </div>
+  <div class="col-md-4">
+    <h1>Resource Title</h1>
+    <h4>Resource Description</h4>
+    <p>Jean shorts McSweeney's Tumblr post-ironic, keffiyeh Intelligentsia stumptown +1 master cleanse meh seitan plaid salvia irony. Freegan ennui Kickstarter Austin. Roof party seitan gluten-free, letterpress dreamcatcher Tumblr sriracha Echo Park YOLO slow-carb trust fund pop-up. Ennui small batch polaroid, tote bag photo booth Pinterest banjo sartorial slow-carb keffiyeh Intelligentsia retro. Butcher salvia Neutra actually. 90's fingerstache roof party twee Neutra, Pitchfork meggings literally. Pinterest Neutra paleo, salvia street art Tonx Echo Park literally tattooed.</p>
+    <a href="#">Link to the resource</a>    
+  </div>  
 </div>
 
 
-
 </div>
-
-
 
 </div> <!--container-->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -109,7 +120,6 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-  $("#hello_world").append("hi christie :) javascript appended this...")
 
   $("a").on('click', function(){
   	$(this).text("MEOW!")
