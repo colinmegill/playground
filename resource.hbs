@@ -1,0 +1,13 @@
+	<div class="col-md-4 ">
+    <div class="resource book"> 
+      <button class="pull-right btn btn-sm btn-primary"><i class="fa fa-plus"></i></button>
+      <h3><i class="fa fa-book"></i>&nbsp;{{name}}</h3>
+      <p><em>{{description}}</em></p>
+      <p><a href="{{url}}"><i class="fa fa-external-link"></i>&nbsp;What Your First Grader Needs To Know</a></p>
+      <div class="tags"> 
+      	{{#each tags}}
+        	<button class="btn btn-default btn-xs"><i class="fa fa-tag"></i> {{tag}} </button>
+        {{/each}}
+      </div>
+    </div>
+  </div>

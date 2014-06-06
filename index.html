@@ -31,7 +31,29 @@
     height: 300px;
     border: 5px solid grey;
     border-radius: 10px;
+    margin-top: 20px;
   }
+
+  .resource {
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+  }
+
+  .resource h3 {
+    font-weight: bold;
+    line-height: 1.4
+  }
+
+  .book {
+    background-color: rgba(26, 188, 156, .1);
+  }
+
+  .place {
+    background-color: rgba(52, 152, 219, .1)
+  }
+
+
 
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -93,33 +115,7 @@
 </div>
 
 
-<div class="row">
-  <div class="col-md-4">
-    <h2>Resource Title</h2>
-    <h4>Resource Description</h4>
-    <p>Jean shorts McSweeney's Tumblr post-ironic, keffiyeh Intelligentsia stumptown +1 master cleanse meh seitan plaid salvia irony. Freegan ennui Kickstarter Austin. Roof party seitan gluten-free, letterpress dreamcatcher Tumblr sriracha Echo Park YOLO slow-carb trust fund pop-up. Ennui small batch polaroid, tote bag photo booth Pinterest banjo sartorial slow-carb keffiyeh Intelligentsia retro. Butcher salvia Neutra actually. 90's fingerstache roof party twee Neutra, Pitchfork meggings literally. Pinterest Neutra paleo, salvia street art Tonx Echo Park literally tattooed.</p>
-    <a href="#">Link to the resource</a>
-    <div class="">
-      
-    </div>
-    
-  </div>
-  <div class="col-md-4">
-    <h2>Resource Title</h2>
-    <h4>Resource Description</h4>
-    <p>Jean shorts McSweeney's Tumblr post-ironic, keffiyeh Intelligentsia stumptown +1 master cleanse meh seitan plaid salvia irony. Freegan ennui Kickstarter Austin. Roof party seitan gluten-free, letterpress dreamcatcher Tumblr sriracha Echo Park YOLO slow-carb trust fund pop-up. Ennui small batch polaroid, tote bag photo booth Pinterest banjo sartorial slow-carb keffiyeh Intelligentsia retro. Butcher salvia Neutra actually. 90's fingerstache roof party twee Neutra, Pitchfork meggings literally. Pinterest Neutra paleo, salvia street art Tonx Echo Park literally tattooed.</p>
-    <a href="#">Link to the resource</a>  
-  </div>
-  <div class="col-md-4">
-    <h2>Resource Title</h2>
-    <h4>Resource Description</h4>
-    <p>Jean shorts McSweeney's Tumblr post-ironic, keffiyeh Intelligentsia stumptown +1 master cleanse meh seitan plaid salvia irony. Freegan ennui Kickstarter Austin. Roof party seitan gluten-free, letterpress dreamcatcher Tumblr sriracha Echo Park YOLO slow-carb trust fund pop-up. Ennui small batch polaroid, tote bag photo booth Pinterest banjo sartorial slow-carb keffiyeh Intelligentsia retro. Butcher salvia Neutra actually. 90's fingerstache roof party twee Neutra, Pitchfork meggings literally. Pinterest Neutra paleo, salvia street art Tonx Echo Park literally tattooed.</p>
-    <a href="#">Link to the resource</a>   
-    <div class="mapwidget">
-      <div id="map-canvas"style="border-radius: 10px"></div>
-    </div>
-  </div>  
-</div>
+<div class="row" id="resources">
 
 
 </div>
@@ -160,12 +156,12 @@ $(document).ready(function(){
     $resourceDescription.val('')
     $resourceURL.val('')
 
-
     console.log(resource);
-    
-
   })
 
+  for (i=0; i<window.resources.length; i++) {
+    $("#resources").append("<div class=\"col-md-4 \"> <div class=\"resource book\"> <button class=\"pull-right btn btn-sm btn-primary\"><i class=\"fa fa-plus\"></i></button> <h3><i class=\"fa fa-book\"></i>&nbsp;" + window.resources[i].name +"</h3> <p><em>"+window.resources[i].description+"</em></p> <p><a href="+ window.resources[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ window.resources[i].name +"</a></p> </div> </div>")
+  }
 
 })
 
