@@ -133,6 +133,15 @@
 
 $(document).ready(function(){
 
+  $.get('resources').done(function(data){ 
+
+    for (i=0; i<data.length; i++) {
+      $("#resources").append("<div class=\"col-md-4 \"> <div class=\"resource book\"> <button class=\"pull-right btn btn-sm btn-primary\"><i class=\"fa fa-plus\"></i></button> <h3><i class=\"fa fa-book\"></i>&nbsp;" + data[i].name +"</h3> <p><em>"+data[i].description+"</em></p> <p><a href="+ data[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ data[i].name +"</a></p> </div> </div>")
+    }
+
+  })
+
+
   $("a").on('click', function(){
   	$(this).text("MEOW!")
   })
@@ -156,12 +165,15 @@ $(document).ready(function(){
     $resourceDescription.val('')
     $resourceURL.val('')
 
-    console.log(resource);
+    // console.log(resource);
+    $.ajax({
+      type: "POST",
+      url: "resources",
+      data: resource,
+    });
   })
 
-  for (i=0; i<window.resources.length; i++) {
-    $("#resources").append("<div class=\"col-md-4 \"> <div class=\"resource book\"> <button class=\"pull-right btn btn-sm btn-primary\"><i class=\"fa fa-plus\"></i></button> <h3><i class=\"fa fa-book\"></i>&nbsp;" + window.resources[i].name +"</h3> <p><em>"+window.resources[i].description+"</em></p> <p><a href="+ window.resources[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ window.resources[i].name +"</a></p> </div> </div>")
-  }
+
 
 })
 
