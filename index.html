@@ -118,6 +118,7 @@
 <div class="row" id="resources">
 
 
+  
 </div>
 
 </div> <!--container-->
@@ -165,6 +166,7 @@ $(document).ready(function(){
     $resourceDescription.val('')
     $resourceURL.val('')
 
+
     // console.log(resource);
     $.ajax({
       type: "POST",
@@ -172,7 +174,6 @@ $(document).ready(function(){
       data: resource,
     });
   })
-
 
 
 })
