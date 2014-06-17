@@ -18,9 +18,11 @@ console.log("Started server on port " + port );
 
 
 
+//to connect to my MongoClient online
+//heroku config
+//then add the following link 
 
-
-MongoClient.connect("never_commit_the_mongo_uri or other people will be able to use it - we will fix this soon, for now type $heroku config, paste the uri in and then delete it before making your commit", {}, function(error, db){
+MongoClient.connect("mongodb://heroku_app25841368:g8hhcisp1tahm5083m48fn2hfp@ds033018.mongolab.com:33018/heroku_app25841368", {}, function(error, db){
  
   // console.log will write to the heroku log which can be accessed via the 
   // command line as "heroku logs"
