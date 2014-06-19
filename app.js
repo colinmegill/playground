@@ -1,13 +1,17 @@
 var path = require("path");
 var express = require("express");
+var connect = require("connect");
+var bodyParser = require('body-parser');
 var mongo = require("mongodb");
 var MongoClient = mongo.MongoClient;
 var ObjectId = mongo.ObjectID;
 
+// http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0
 /* creates an express server */
 var app = express()
             .use(express.static(__dirname))
-						// .use(express.json())      // to support JSON-encoded bodies
+            .use(bodyParser()); 							
+            // .use(express.json())      // to support JSON-encoded bodies
 						// .use(express.urlencoded()); // to support URL-encoded bodies
 
 
@@ -44,10 +48,9 @@ MongoClient.connect("mongodb://heroku_app25841368:g8hhcisp1tahm5083m48fn2hfp@ds0
 		  });
 	});
 
-	// app.post("/resources", function(req, res){
-	// 	if (err) console.log(err);
-	// 	console.log("sending a resource to go into the database" + req)
-	// })
+	app.post("/resources", function(req, res){
+		console.log(req.body)
+	})
 
 
 
