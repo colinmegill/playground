@@ -1,0 +1,69 @@
+User should be able to:
+
+
+Tags:
+Parent education
+Literacy
+Art
+Social
+Academic
+Program
+Curriculum
+Book
+
+
+
+
+
+
+
+Basic
+git:
+$ git fetch
+$ git reset --hard HEAD
+$ git rebase origin/master
+
+$git add 
+
+the second command will wipe all of your changes since your last commit. You could also commit all of your changes, if you want them. in that case do a git add and git commit, then rebase onto what I did (origin/master)
+
+Advanced
+wire up the submit button of the form to, after it 
+try writing another request, app.post("/resources" that puts data into mongo
+
+
+
+escape vim: :q
+
+//web: node app.js
+
+
+
+
+//html for a form
+
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+//tags 
+
