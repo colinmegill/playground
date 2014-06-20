@@ -34,7 +34,7 @@ $(document).ready(function(){
           If we DO have the text of the button in the array of the tag, then we DO want the jquery to run, 
           which it will because it is truthy.
         */
-        if (resources[i].tags.indexOf($text) != -1) {
+        if (resources[i].tags.indexOf($text) != -1 && resources[i].approved === true) {
           $("#resources").append("<div class=\"col-md-6 \"> <div class=\"resource book\"> <button class=\"pull-right btn btn-sm btn-primary\"><i class=\"fa fa-plus\"></i></button> <h3><i class=\"fa fa-book\"></i>&nbsp;" + resources[i].name +"</h3> <p><em>"+resources[i].description+"</em></p> <p><a href="+ resources[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ resources[i].name +"</a></p> </div> </div>")
         }
       }
@@ -42,8 +42,11 @@ $(document).ready(function(){
 
 
     for (i=0; i<resources.length; i++) {
-       $("#resources").append("<div class=\"col-md-6 \"> <div class=\"resource book\"> <button class=\"pull-right btn btn-sm btn-primary\"><i class=\"fa fa-plus\"></i></button> <h3><i class=\"fa fa-book\"></i>&nbsp;" + resources[i].name +"</h3> <p><em>"+resources[i].description+"</em></p> <p><a href="+ resources[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ resources[i].name +"</a></p> </div> </div>")
-     }
+      if (resources[i].approved === true){
+        $("#resources").append("<div class=\"col-md-6 \"> <div class=\"resource book\"> <button class=\"pull-right btn btn-sm btn-primary\"><i class=\"fa fa-plus\"></i></button> <h3><i class=\"fa fa-book\"></i>&nbsp;" + resources[i].name +"</h3> <p><em>"+resources[i].description+"</em></p> <p><a href="+ resources[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ resources[i].name +"</a></p> </div> </div>")
+      
+      }
+    }
 
   })
 
