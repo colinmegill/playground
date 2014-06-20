@@ -1,0 +1,20 @@
+function appendBookForm() {
+	$("#restOfResourceForm").html("<div class=\"form-group\">\r\n          <label for=\"resourceName\">Book Title<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceName\" placeholder=\"Book Title\">\r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceDescription\">Description<\/label>\r\n          <textarea class=\"form-control\" id=\"resourceDescription\" placeholder=\"Description\"><\/textarea> \r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceURL\">Purchase URL<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceURL\" placeholder=\"Purchase URL\">\r\n        <\/div>\r\n        <button type=\"submit\" id=\"submitResource\" class=\"btn btn-primary btn-lg\">Submit Resource<\/button>\r\n");
+}
+
+function appendPlaceForm() {
+	$("#restOfResourceForm").html("<div class=\"form-group\">\r\n          <label for=\"resourceName\">Place Name<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceName\" placeholder=\"Place Name\">\r\n   <p> <em> ie., Woodland Park Zoo </em> </p>      <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceAddress\">Address<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceAddress\" placeholder=\"Address\">\r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceDescription\">Description<\/label>\r\n          <textarea class=\"form-control\" id=\"resourceDescription\" placeholder=\"Description\"><\/textarea> \r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceURL\">URL<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceURL\" placeholder=\"URL\">\r\n        <\/div>\r\n        <button type=\"submit\" id=\"submitResource\" class=\"btn btn-primary btn-lg\">Submit Resource<\/button>")
+}
+
+function appendCurriculumForm() {
+	$("#restOfResourceForm").html("<div class=\"form-group\">\r\n          <label for=\"resourceName\">Curriculum Name<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceName\" placeholder=\"Curriculum Name\">\r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceDescription\">Description<\/label>\r\n          <textarea class=\"form-control\" id=\"resourceDescription\" placeholder=\"Description\"><\/textarea> \r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceURL\">URL<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceURL\" placeholder=\"URL\">\r\n        <\/div>\r\n        <button type=\"submit\" id=\"submitResource\" class=\"btn btn-primary btn-lg\">Submit Resource<\/button>")
+}
+
+function appendNetworkForm() {
+	$("#restOfResourceForm").html("<div class=\"form-group\">\r\n          <label for=\"resourceName\">Network Name<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceName\" placeholder=\"Network Name\">\r\n <p> <em> ie., Greenlake Moms </em> </p>        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceDescription\">Description<\/label>\r\n          <textarea class=\"form-control\" id=\"resourceDescription\" placeholder=\"Description\"><\/textarea> \r\n        <\/div>\r\n        <div class=\"form-group\">\r\n          <label for=\"resourceURL\">URL<\/label>\r\n          <input type=\"text\" class=\"form-control\" id=\"resourceURL\" placeholder=\"URL\">\r\n        <\/div>\r\n        <button type=\"submit\" id=\"submitResource\" class=\"btn btn-primary btn-lg\">Submit Resource<\/button>")
+}
+
+//destroy any html attached to the root element
+function resetResourceForm() {
+	$("#restOfResourceForm").html("")
+}

@@ -54,6 +54,8 @@ MongoClient.connect("mongodb://heroku_app25841368:g8hhcisp1tahm5083m48fn2hfp@ds0
 		
 		resourcesCollection.insert(data, {safe:true}, function(err, records){
 				console.log("Record added as "+records[0]._id);
+				if (err) { res.send(404) }
+				res.send(200)
 		})
 	})
 

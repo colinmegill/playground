@@ -26,12 +26,20 @@
     padding: 0px
   }
 
+  .sub
+
   .mapwidget {
     width: 300px;
     height: 300px;
     border: 5px solid grey;
     border-radius: 10px;
     margin-top: 20px;
+  }
+
+  .donate {
+    background-color: rgba(44, 62, 80, .1);
+    padding: 20px;
+    border-radius: 10px;
   }
 
   .resource {
@@ -47,11 +55,22 @@
 
   .book {
     background-color: rgba(52, 152, 219, .1);
+    /*<i class="fa fa-book"></i> */
   }
 
   .place {
-    background-color: rgba(52, 152, 219, .1)
+    background-color: rgba(52, 152, 219, .1);
+    /*<i class="fa fa-map-marker"></i> */
   }
+
+  .curriculum {
+    /*<i class="fa fa-calendar"></i>*/
+  }
+
+  .network {
+    /*<i class="fa fa-calendar"></i>*/
+  }
+
 
   .tagSortButton {
     margin-bottom: 10px;
@@ -87,51 +106,63 @@
 <div class="container">
 
   <div class="row headerAndSubmitForm">
-    <div class="col-sm-6">
-      <h1>Homeschooling~</h1>
-      <h3><em> In Seattle and beyond</em></h3>
-      <form action="" method="POST">
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_x6ETDQy1aCvKnaIJ2dyYFVVj"
-          data-amount="2000"
-          data-name="Homeschooling"
-          data-description="One Time Donation ($20.00)">
-        </script>
-      </form>
+    <div class="col-sm-12">
+      <h1>Homeschooling in Seattle and beyond~</h1>
     </div>
     <div class="col-sm-6">
-      <div class="well">
-        <form role="form">
-          <div class="form-group">
-            <label for="resourceName">Resource Name</label>
-            <input type="text" class="form-control" id="resourceName" placeholder="Resource Name">
+      <h3><strong>About:</strong></h3>
+      <p> Seattle and the surrounding area boast a thriving homeschool community. This website is an aggregator of homeschooling resources found in Seattle, neighboring communities, and online, and is completely secular. Within the listing are an assortment of programs, classes, activities, workshops, events, books, and curricula. </p> <p> This site is developed and maintained by a homeschooling family of two experienced educators that currently resides in Wallingford, in the interest of giving back to a community that has given so much to them.</p> 
+      <h3><strong>Submit Resources!</strong></h3>
+      <p>We are a new and growing website, and we need your help to grow! Know a great resource? Fill out the form at the top of the page and submit it.</p>
+      <p>Soon, this website will also provide a platform to create, share and search homeschooling patterns, schedules and routines composed of the resources on this site.</p> 
+
+
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="donate">
+            <h3><strong>Donate:</strong></h3>
+            <form role="form">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                    <input id="donateInput" type="text" class="form-control" placeholder="Amount"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <button id="donateButton" class="btn btn-danger btn-lg">Donate</button>
+              </div>
+            </form>
+            <p><em>100% of donations finance the expansion and improvement of the features and usability of this site. </em></p>
           </div>
-          <div class="form-group">
-            <label for="resourceAddress">Address</label>
-            <input type="text" class="form-control" id="resourceAddress" placeholder="Address">
-          </div>
-          <div class="form-group">
-            <label for="resourceDescription">Description</label>
-            <textarea class="form-control" id="resourceDescription" placeholder="Description"></textarea> 
-          </div>
-          <div class="form-group">
-            <label for="resourceURL">URL</label>
-            <input type="text" class="form-control" id="resourceURL" placeholder="URL">
-          </div>
-          <button type="submit" id="submitResource" class="btn btn-default">Submit</button>
-        </form>
+        </div>
       </div>
+      
+
+
+    </div>
+    <div class="col-sm-4 col-sm-offset-1">
+      <h3 class="submitTitle"><strong>Submit A Resource</strong></h3>
+      <p><em>Select a type to get started</em></p>
+
+      <form role="form">
+        <div class="form-group">
+          <select class="form-control" id="selectResourceType">
+            <option >Type...</option>
+            <option>Book</option>
+            <option>Place</option>
+            <option>Curriculum</option>
+            <option>Network of People</option>
+          </select>
+        </div>
+        <div id="restOfResourceForm">
+        </div>
+      </form>
     </div>
   </div>
 
-
-
-
-
-
   <div class="row">
     <div class="col-sm-2" id="tags">
+    <div class="alert alert-info">Click on a <button class="btn btn-primary btn-xs"> tag </button> to filter the results.</div>
     </div>
     <div class="col-sm-10">
       <div class="row" id="resources">  
@@ -141,11 +172,12 @@
 </div> <!--container-->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
 <script type="text/javascript" src="masonry.min.js"></script>
+<script type="text/javascript" src="templates.js"></script>
 <script type="text/javascript" src="resources.js"></script>
 
 
