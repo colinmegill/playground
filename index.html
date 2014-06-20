@@ -11,14 +11,13 @@
   body {
     font-family: "museo-slab";
     font-size: 14px;
+    margin-top: 40px;
   }
 
-  h1 {
-    font-size: 6em;
-  }
-
-  h2 {
-    font-size: 4em;
+  .headerAndSubmitForm {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid lightgrey;
   }
 
   #map-canvas {
@@ -47,7 +46,7 @@
   }
 
   .book {
-    background-color: rgba(26, 188, 156, .1);
+    background-color: rgba(52, 152, 219, .1);
   }
 
   .place {
@@ -87,11 +86,20 @@
 
 <div class="container">
 
-
-  <h1>Homeschooling! </h1>
-  <h2>in Seattle and Beyond</h2>
-
-  <div class="row">
+  <div class="row headerAndSubmitForm">
+    <div class="col-sm-6">
+      <h1>Homeschooling~</h1>
+      <h3><em> In Seattle and beyond</em></h3>
+      <form action="" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_x6ETDQy1aCvKnaIJ2dyYFVVj"
+          data-amount="2000"
+          data-name="Homeschooling"
+          data-description="One Time Donation ($20.00)">
+        </script>
+      </form>
+    </div>
     <div class="col-sm-6">
       <div class="well">
         <form role="form">
@@ -118,6 +126,10 @@
   </div>
 
 
+
+
+
+
   <div class="row">
     <div class="col-sm-2" id="tags">
     </div>
@@ -133,6 +145,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
+<script type="text/javascript" src="masonry.min.js"></script>
 <script type="text/javascript" src="resources.js"></script>
 
 
