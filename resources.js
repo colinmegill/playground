@@ -4,8 +4,15 @@ $(document).ready(function(){
     doTagLogic(resources);
     setAllResources(resources);
     doMasonry()
+    console.dir(resources)
   })
 
+
+//if statement in the template page to say " if the the TYPE is (place), then the font awesome icon it should get is... "
+//Conditionally add class -- class book for ex. (no spaces, use underscore) Use class in head of index.html to then change color . FlatUI colors for each 
+//Functions: make a button, nuke what's there, only show (loop through resources) // apend the type of 
+
+//what other resource types do I need? Website 
 
 function submitResourceFormHandler() {
   //form submit logic
