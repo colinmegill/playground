@@ -37,7 +37,7 @@ $(document).ready(function(){
     })
     for (i=0; i<resources.length; i++) {
       if (resources[i].approved === true){
-        $("#resources").append("<div class=\"col-md-6 masonry-item \"> <div class=\"resource book\"> <h3><i class=\"fa fa-book\"></i>&nbsp;" + resources[i].name +"</h3> <p><em>"+resources[i].description+"</em></p> <p><a href="+ resources[i].url +"><i class=\"fa fa-external-link\"></i>&nbsp;"+ resources[i].name +"</a></p> </div> </div>")
+        $("#resources").append("<div class=\"col-md-6 masonry-item \"> <div class=\"resource book\"> <h3><i class=\"fa fa-book\"></i>&nbsp;" + resources[i].name +"</h3> <p><em>"+resources[i].description+"</em></p> <p><a href=\""+ resources[i].url +"\"><i class=\"fa fa-external-link\"></i>&nbsp;"+ resources[i].name +"</a></p> </div> </div>")
       }
     }
     var container = document.querySelector('#resources');
@@ -106,24 +106,24 @@ function submitResourceFormHandler() {
   })
 
 
-  var handler = StripeCheckout.configure({
-    key: 'pk_live_uAY8LydDEydIS3oH4ZmaBpnw',
-    token: function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
+  // var handler = StripeCheckout.configure({
+  //   key: 'pk_live_uAY8LydDEydIS3oH4ZmaBpnw',
+  //   token: function(token) {
+  //     // Use the token to create the charge with a server-side script.
+  //     // You can access the token ID with `token.id`
+  //   }
+  // });
 
-  document.getElementById('donateButton').addEventListener('click', function(e) {
-    // Open Checkout with further options
-    var amount = $("#donateInput").val()
-    handler.open({
-      name: 'Seattle Homeschooling',
-      description: '~one time donation~',
-      amount: amount * 100
-    });
-    e.preventDefault();
-  });
+  // document.getElementById('donateButton').addEventListener('click', function(e) {
+  //   // Open Checkout with further options
+  //   var amount = $("#donateInput").val()
+  //   handler.open({
+  //     name: 'Seattle Homeschooling',
+  //     description: '~one time donation~',
+  //     amount: amount * 100
+  //   });
+  //   e.preventDefault();
+  // });
 
 
 

@@ -12,7 +12,6 @@
     font-family: "museo-slab";
     font-size: 16px;
     margin-top: 40px;
-    background-color: #FFFFE9
   }
 
   .headerAndSubmitForm {
@@ -21,6 +20,22 @@
     border-bottom: 1px solid lightgrey;
 
   }
+
+
+  h1 {
+        font-size: 54px;
+    padding:20px;
+    border: 5px solid lightgrey;
+    text-align: center;
+    font-weight: 700;
+        color: rgba(211, 84, 0,1);
+
+  }
+
+  .heading {
+
+    font-weight: 700;
+    color: rgba(52, 73, 94, .7);
   }
 
   #map-canvas {
@@ -28,8 +43,6 @@
     margin: 0px;
     padding: 0px
   }
-
-  .sub
 
   .mapwidget {
     width: 300px;
@@ -40,7 +53,7 @@
   }
 
   .donate {
-    background-color: rgba(52, 152, 219, .1);
+    background-color: rgba(52, 152, 219,.1);
     padding: 20px;
     border-radius: 10px;
   }
@@ -57,21 +70,22 @@
   }
 
   .book {
-    background-color: rgba(52, 152, 219, .1);
-    <i class="fa fa-book"></i> 
+    background-color: rgba(52, 152, 219,.1);
+    border: 2px solid rgba(149, 165, 166,.5);
+    /*<i class="fa fa-book"></i> */
   }
 
   .place {
     background-color: rgba(52, 152, 219, .1);
-    <i class="fa fa-map-marker"></i> 
+    /*<i class="fa fa-map-marker"></i> */
   }
 
   .curriculum {
-    <i class="fa fa-calendar"></i>
+    /*<i class="fa fa-calendar"></i>*/
   }
 
   .network {
-    <i class="fa fa-calendar"></i>
+    /*<i class="fa fa-calendar"></i>*/
   }
 
 
@@ -102,18 +116,18 @@
 <div class="container">
     
   <div class="row headerAndSubmitForm">
-    <div class="col-sm-16">
-      <h1>Homeschooling in Seattle and beyond</h1>
+    <div class="col-sm-12">
+      <h1 >Seattle Homeschooling</h1>
     </div>
     <div class="col-sm-6">
-      <h3><strong>About:</strong></h3>
+      <h3 class="heading"><strong>About:</strong></h3>
       <p> Seattle and the surrounding area boast a thriving homeschool community. This website is an aggregator of homeschooling resources found in Seattle, neighboring communities, and online. Within the listing are an assortment of programs, classes, activities, workshops, events, books, and curricula. </p> <p> This site is developed and maintained by a homeschooling family of two experienced educators that currently resides in Wallingford, in the interest of giving back to a community that has given so much to them.</p> 
-      <h3><strong>Submit Resources!</strong></h3>
+      <h3 class="heading"><strong>Submit Resources!</strong></h3>
       <p>We are a new and growing website, and we need your help to grow! Know a great resource? Fill out the form at the top of the page and submit it.</p>
       <p>Soon, this website will also provide a platform to create, share and search homeschooling patterns, schedules and routines composed of the resources on this site.</p> 
 
 
-      <div class="row">
+<!--       <div class="row">
         <div class="col-sm-8">
           <div class="donate">
             <h3><strong>Donate:</strong></h3>
@@ -133,11 +147,11 @@
         </div>
       </div>
       
-
+ -->
 
     </div>
     <div class="col-sm-4 col-sm-offset-1">
-      <h3 class="submitTitle"><strong>Submit A Resource</strong></h3>
+      <h3 class="submitTitle heading"><strong>Submit A Resource</strong></h3>
       <p><em>Select a type to get started</em></p>
 
       <form role="form">
@@ -158,7 +172,7 @@
 
   <div class="row">
     <div class="col-sm-2" id="tags">
-    <div class="alert alert-info">Click on a <button class="btn btn-primary btn-xs"> tag </button> to filter the results.</div>
+    <div class="alert alert-warning">Click on a <button class="btn btn-primary btn-xs"> tag </button> to filter the results.</div>
     </div>
     <div class="col-sm-10">
       <div class="row" id="resources">  
