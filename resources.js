@@ -12,7 +12,6 @@ $(document).ready(function(){
 //Conditionally add class -- class book for ex. (no spaces, use underscore) Use class in head of index.html to then change color . FlatUI colors for each 
 //Functions: make a button, nuke what's there, only show (loop through resources) // apend the type of 
 
-//what other resource types do I need? Website 
 
 function submitResourceFormHandler() {
   //form submit logic
@@ -68,6 +67,9 @@ function submitResourceFormHandler() {
       submitResourceFormHandler();
     } else if ($resourceChoice === "Curriculum") {
       appendCurriculumForm();
+      submitResourceFormHandler();
+    } else if ($resourceChoice === "Website") {
+      appendWebsiteForm();
       submitResourceFormHandler();
     }
   })
